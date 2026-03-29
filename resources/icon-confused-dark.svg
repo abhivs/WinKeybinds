@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Key shadow/extrusion (darker bottom-right edge for 3D relief) -->
+  <path d="M 500 60 h 370 c 40 0 72 32 72 72 v 700 c 0 40 -32 72 -72 72 H 130 c -40 0 -72 -32 -72 -72 V 490 c 0 -40 32 -72 72 -72 h 298 V 132 c 0 -40 32 -72 72 -72 z"
+        fill="#1a1a1a"/>
+
+  <!-- Key top face -->
+  <path d="M 490 48 h 370 c 40 0 72 32 72 72 v 700 c 0 40 -32 72 -72 72 H 120 c -40 0 -72 -32 -72 -72 V 478 c 0 -40 32 -72 72 -72 h 298 V 120 c 0 -40 32 -72 72 -72 z"
+        fill="#2a2a2a" stroke="#4a4a4a" stroke-width="10"/>
+
+  <!-- Inner bevel highlight -->
+  <path d="M 508 78 h 334 c 28 0 50 22 50 50 v 664 c 0 28 -22 50 -50 50 H 148 c -28 0 -50 -22 -50 -50 V 496 c 0 -28 22 -50 50 -50 h 298 V 128 c 0 -28 22 -50 50 -50 z"
+        fill="none" stroke="#3a3a3a" stroke-width="6" opacity="0.7"/>
+
+  <!-- === CONFUSED FACE — bottom-left of lower section === -->
+
+  <!-- X Eyes -->
+  <line x1="268" y1="583" x2="292" y2="607" stroke="#a0a0a0" stroke-width="7" stroke-linecap="round"/>
+  <line x1="292" y1="583" x2="268" y2="607" stroke="#a0a0a0" stroke-width="7" stroke-linecap="round"/>
+  <line x1="408" y1="583" x2="432" y2="607" stroke="#a0a0a0" stroke-width="7" stroke-linecap="round"/>
+  <line x1="432" y1="583" x2="408" y2="607" stroke="#a0a0a0" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Nose — Windows logo (Bootstrap Icons, MIT) -->
+  <g transform="translate(322, 637) scale(3.5)">
+    <path fill="#a0a0a0" d="M6.555 1.375 0 2.237v5.45h6.555zM0 13.795l6.555.933V8.313H0zm7.278-5.4.026 6.378L16 16V8.395zM16 0 7.33 1.244v6.414H16z"/>
+  </g>
+
+  <!-- Frown -->
+  <path d="M 285 755 Q 350 720 415 755" stroke="#a0a0a0" stroke-width="8" fill="none" stroke-linecap="round"/>
+</svg>
