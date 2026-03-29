@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="resources/icon.svg" width="128" height="128" alt="WinKeybinds icon">
+</p>
+
 # WinKeybinds
 
 WinKeybinds is a native Apple Silicon reimplementation of
