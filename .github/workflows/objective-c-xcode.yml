@@ -12,4 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build
-        run: xcodebuild -scheme WinKeybinds -configuration Release -arch arm64 ONLY_ACTIVE_ARCH=NO clean build
+        run: |
+          xcodebuild -scheme WinKeybinds -configuration Release -arch arm64 ONLY_ACTIVE_ARCH=NO clean build
+          APP_PATH=$(find ~/Library/Developer/Xcode/DerivedData -path "*/Release/WinKeybinds.app" -type d | head -1)
+          ditto -c -k --keepParent "$APP_PATH" WinKeybinds.zip
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: WinKeybinds
+          path: WinKeybinds.zip
