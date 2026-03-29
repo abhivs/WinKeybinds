@@ -1,0 +1,15 @@
+name: Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: xcodebuild -scheme WinKeybinds -configuration Release -arch arm64 ONLY_ACTIVE_ARCH=NO clean build
