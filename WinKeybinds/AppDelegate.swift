@@ -52,17 +52,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             prefs.markAsLaunched()
         }
 
-        // Check accessibility permissions
-        let options = [kAXTrustedCheckOptionPrompt.takeUnretainedValue(): true] as CFDictionary
-        if !AXIsProcessTrustedWithOptions(options) {
+        // Check accessibility permissions (without triggering system prompt)
+        if !AXIsProcessTrusted() {
             NSApp.activate(ignoringOtherApps: true)
             let alert = NSAlert()
             alert.icon = confusedIcon
             alert.messageText = "Accessibility Access Required"
-            alert.informativeText = "WinKeybinds needs accessibility access to intercept keyboard events in Finder.\n\nPlease grant access in System Settings \u{2192} Privacy & Security \u{2192} Accessibility, then relaunch WinKeybinds."
+            alert.informativeText = "WinKeybinds needs accessibility access to intercept keyboard events in Finder.\n\nPlease grant access in System Settings → Privacy & Security → Accessibility, then relaunch WinKeybinds."
             alert.alertStyle = .critical
+            alert.addButton(withTitle: "Open System Settings")
             alert.addButton(withTitle: "Quit")
-            alert.runModal()
+            if alert.runModal() == .alertFirstButtonReturn {
+                NSWorkspace.shared.open(URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility")!)
+            }
             NSApp.terminate(nil)
             return
         }
