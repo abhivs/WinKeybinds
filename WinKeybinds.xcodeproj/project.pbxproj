@@ -13,7 +13,7 @@
 		A10000010000000000000004 /* PreferencesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000004 /* PreferencesManager.swift */; };
 		A10000010000000000000005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000005 /* Assets.xcassets */; };
 		A10000010000000000000008 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000009 /* main.swift */; };
-		A10000010000000000000010 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000010 /* AppIcon.icon */; };
+		A10000010000000000000010 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000010 /* AppIcon.icon */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +24,7 @@
 		A10000020000000000000005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A10000020000000000000008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A10000020000000000000009 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		A10000020000000000000010 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.icon; sourceTree = "<group>"; };
+		A10000020000000000000010 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.icon-composer; path = AppIcon.icon; sourceTree = "<group>"; };
 		A10000030000000000000001 /* WinKeybinds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinKeybinds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
