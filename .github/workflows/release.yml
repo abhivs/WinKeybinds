@@ -1,0 +1,23 @@
+name: Release
+
+on:
+  push:
+    tags: [ "v*" ]
+
+jobs:
+  release:
+    runs-on: macos-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: |
+          xcodebuild -scheme WinKeybinds -configuration Release -arch arm64 ONLY_ACTIVE_ARCH=NO clean build
+          APP_PATH=$(find ~/Library/Developer/Xcode/DerivedData -path "*/Release/WinKeybinds.app" -type d | head -1)
+          ditto -c -k --keepParent "$APP_PATH" WinKeybinds.zip
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: WinKeybinds.zip
+          generate_release_notes: true
